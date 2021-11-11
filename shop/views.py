@@ -8,3 +8,7 @@ def shop(request):
 def cart(request):
     context = {}
     return render(request, 'shop/cart.html', context)
+
+def checkout(request):
+    context = {}
+    return render(request, 'shop/checkkout.html', context)
