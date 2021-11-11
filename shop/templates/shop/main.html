@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'shop' %}">Guitar Nook</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
                 <a href="#" class="btn btn-warning">Login</a>
 
                 <a href="{% url 'cart' %}">
-                    <img id="trolley-icon"src="{% static 'images/trolley-icon' %}" alt="">
+                    <img id="trolley-icon"src="{% static 'images/shopping-trolley.svg' %}" alt="">
                 </a>
                 <p id="trolley-total">0
 

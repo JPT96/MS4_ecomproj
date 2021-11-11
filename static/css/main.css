@@ -1,0 +1,14 @@
+
+.bg-light{
+    background: linear-gradient(#e66465, #9198e5);
+}
+#trolley-icon{
+    width: 25px;
+    display:inline-block;
+    margin-top: 2px;
+    margin-left: 15px;
+    
+}
+#trolley-total{
+    display: block;
+}
