@@ -14,4 +14,7 @@
     text-align: center;
     color: #fff;
     background-color: cadetblue;
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
 }
