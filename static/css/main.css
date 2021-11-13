@@ -59,3 +59,8 @@
 .small-product-image{
     width:105px;
 }
+.quantity{
+    display: inline-block;
+	font-weight: 600;
+	padding-right:10px;
+}
