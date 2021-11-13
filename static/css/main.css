@@ -64,14 +64,3 @@
 	font-weight: 600;
 	padding-right:10px;
 }
-.form-field{
-	width:250px;
-	display: inline-block;
-	padding: 5px;
-}
-.flex1{
-    flex: 1;
-}
-.flex2{
-    flex:2;
-}
