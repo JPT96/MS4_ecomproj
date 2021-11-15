@@ -32,3 +32,6 @@ class OrderItem(models.model):
     order = models.ForeginKey(Order, on_delete=models.set_NULL, null=True) 
     quantity= models.IntergerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
+
+class ShippingAddress(models.model):
+    customer = models.ForeginKey(Shopper, on_delete=models.set_NULL, null=True)
