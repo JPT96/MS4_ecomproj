@@ -29,3 +29,4 @@ class Order(models.model):
 
 class OrderItem(models.model):
     product = models.ForeginKey(Product, on_delete=models.set_NULL, null=True) 
+    order = models.ForeginKey(Order, on_delete=models.set_NULL, null=True) 
