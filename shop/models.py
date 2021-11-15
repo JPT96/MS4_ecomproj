@@ -26,3 +26,6 @@ class Order(models.model):
 
     def __str__(self):
         return str(self.id)
+
+class OrderItem(models.model):
+    
