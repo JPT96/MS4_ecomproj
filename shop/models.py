@@ -19,4 +19,4 @@ class Product(models.model):
         return self.name
 
 class Order(models.model):
-    
+    customer = models.ForeginKey(Customer, on_delete=models.set_NULL, null=True, blank=True)
