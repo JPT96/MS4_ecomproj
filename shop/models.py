@@ -13,4 +13,5 @@ class Shopper(models.model):
 class Product(models.model):
     name =models.CharField(max_length=200)
     price = models.FloatField()
-    
+    digital = models.BooleanField(default=False,null=True, blank=True)
+
