@@ -65,3 +65,8 @@
 	font-weight: 600;
 	padding-right:10px;
 }
+.formfield{
+    width: 250px;
+    display: inline-block;
+    padding: 4px;
+}
