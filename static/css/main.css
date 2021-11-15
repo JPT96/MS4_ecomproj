@@ -70,3 +70,6 @@
     display: inline-block;
     padding: 4px;
 }
+.hidden{
+    display: none!important;
+}
