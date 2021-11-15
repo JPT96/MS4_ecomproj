@@ -22,3 +22,4 @@ class Order(models.model):
     customer = models.ForeginKey(Customer, on_delete=models.set_NULL, null=True, blank=True)
     date_order = models.DateTimeField(auto_now_add=True)
     complete = models.BooleanField(default=False)
+    transaction_id = models.CharField(max_length=100, null=True)
