@@ -35,3 +35,9 @@ class OrderItem(models.model):
 
 class ShippingAddress(models.model):
     customer = models.ForeginKey(Shopper, on_delete=models.set_NULL, null=True)
+    order = models.ForeginKey(Order, on_delete=models.set_NULL, null=True)
+    address = models.CharField(max_length=200,null=False)
+    city = models.CharField(max_length=200,null=False)
+    county = models.CharField(max_length=200,null=False)
+    postcode = models.CharField(max_length=200,null=False)
+    date_added = models.DateTimeField(auto_now_add=True)
