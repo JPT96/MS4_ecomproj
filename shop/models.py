@@ -15,3 +15,6 @@ class Product(models.model):
     price = models.FloatField()
     digital = models.BooleanField(default=False,null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
