@@ -9,8 +9,8 @@ def shop(request):
 def cart(request):
 
     if request.user.is_authenticated:
-        customer= request.user.customer
-        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        shopper = request.user.shopper
+        order, created = Order.objects.get_or_create(shopper=shopper, complete=False)
         item = order.orderitem_set.all()
     else:
         items = []
@@ -20,12 +20,12 @@ def cart(request):
 
 def checkout(request):
     if request.user.is_authenticated:
-        customer= request.user.customer
+        customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
         item = order.orderitem_set.all()
     else:
         items = []
         order = {'get_cart_total':0, 'get_cart_items':0}
-    context = {'items':items, 'order':order}
+        context = {'items':items, 'order':order}
     return render(request, 'shop/checkout.html', context)
 
