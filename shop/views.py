@@ -9,7 +9,7 @@ def shop(request):
 def cart(request):
 
     if request.user.is_autheticated:
-        
+        shopper = request.user.shopper
     context = {}
     return render(request, 'shop/cart.html', context)
 
