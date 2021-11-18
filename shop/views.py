@@ -9,8 +9,8 @@ def shop(request):
 def cart(request):
 
     if request.user.is_authenticated:
-        shopper = request.user.shopper
-        order, created = Order.objects.get_or_create(shopper=shopper, complete=False)
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
         item = order.orderitem_set.all()
     else:
         items = []
