@@ -11,7 +11,7 @@ def cart(request):
     if request.user.is_autheticated:
         shopper = request.user.shopper
         order, created = Order.objects.get_or_create(shopper=shopper, complete=False)
-        item = 
+        item = order.orderitem_set.all()
     context = {}
     return render(request, 'shop/cart.html', context)
 
