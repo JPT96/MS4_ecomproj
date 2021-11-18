@@ -8,7 +8,7 @@ def shop(request):
 
 def cart(request):
 
-    if request.user.is_autheticated:
+    if request.user.is_authenticated:
         shopper = request.user.shopper
         order, created = Order.objects.get_or_create(shopper=shopper, complete=False)
         item = order.orderitem_set.all()
