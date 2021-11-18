@@ -7,6 +7,9 @@ def shop(request):
     return render (request, 'shop/shop.html', context)
 
 def cart(request):
+
+    if request.user.is_autheticated:
+        
     context = {}
     return render(request, 'shop/cart.html', context)
 
