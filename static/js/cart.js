@@ -32,7 +32,7 @@ function updateUserorder(productId, action){
 .then((response)=>{
     return response.json();
 })
-.then((data)=> {
+.then((data) => {
     location.reload()
 });
 }
