@@ -19,5 +19,8 @@ for (var i = 0; i < updateBtns.length; i++){
 })
 function updateUserorder(productId, action){
     console.log('User has been authorised')
+
+    var url = '/update_item'
+    fetch(url, {
 }
 }
