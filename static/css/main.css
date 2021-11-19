@@ -2,6 +2,9 @@
 .bg-light{
     background: linear-gradient(#e66465, #9198e5);
 }
+h5{
+    padding-right: 10px;
+}
 #trolley-icon{
     width: 25px;
     display:inline-block;
