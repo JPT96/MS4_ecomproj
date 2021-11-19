@@ -10,7 +10,7 @@ for (var i = 0; i < updateBtns.length; i++){
         if (user == 'AnonymousUser'){
         console.log("User doesn't have a account")}
         else{
-            console.log("User has a account")
+            updateUserorder(productId, actiom   )
 
         } 
 
