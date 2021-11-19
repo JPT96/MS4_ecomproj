@@ -41,5 +41,5 @@ def updateitem(request):
     customer = request.user.customer
     product = product.objects.get(id = productId)
     order, created = Order.objects.get_or_create(customer=customer, complete=False)
-    orderItem, created =  OrderItem.objects.get_or_create(order = order)
+    orderItem, created =  OrderItem.objects.get_or_create(order = order, product=product)
     return JsonResponse('add has been added', safe=False)
