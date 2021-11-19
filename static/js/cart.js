@@ -10,9 +10,14 @@ for (var i = 0; i < updateBtns.length; i++){
         if (user == 'AnonymousUser'){
         console.log("User doesn't have a account")}
         else{
-            updateUserorder(productId, actiom   )
+            updateUserorder(productId, action)
+
 
         } 
 
     
-})}
+})
+function updateUserorder(productId, action){
+    console.log('User has been authorised')
+}
+}
