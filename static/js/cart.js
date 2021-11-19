@@ -22,5 +22,6 @@ function updateUserorder(productId, action){
 
     var url = '/update_item'
     fetch(url, {
+        method:'POST'
 }
 }
