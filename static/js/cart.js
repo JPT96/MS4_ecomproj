@@ -16,7 +16,7 @@ for (var i = 0; i < updateBtns.length; i++){
         } 
 
     
-})
+})}
 function updateUserorder(productId, action){
     console.log('User has been authorised')
 
@@ -29,11 +29,10 @@ function updateUserorder(productId, action){
             body:JSON.stringify({'productId': productId, 'action':action})
 
 })
-.then((response)=>{
-    return response.json();
+    .then((response)=>{
+        return response.json();
 })
-.then((data) => {
-    location.reload()
+    .then((data) => {
+        location.reload()
 });
-}
 }
