@@ -32,5 +32,5 @@ def checkout(request):
     return render(request, 'shop/checkout.html', context)
 
 def updateitem(request):
-    data= json.loads(request)
+    data= json.loads(request.data)
     return JsonResponse('add has been added', safe=False)
