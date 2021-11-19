@@ -1,1 +1,1 @@
-console.log("wuggwunnn")
+var updateBtns = document.getElementsByClassName('update-cart')
