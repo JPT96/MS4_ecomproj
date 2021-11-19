@@ -7,6 +7,12 @@ for (var i = 0; i < updateBtns.length; i++){
         console.log('productId:', productId, 'Action:', action)
 
         console.log('USER:', user)
-        if (user == 'AnonymousUser')
-    })
-}
+        if (user == 'AnonymousUser'){
+        console.log("User doesn't have a account")}
+        else{
+            console.log("User has a account")
+
+        } 
+
+    
+})}
