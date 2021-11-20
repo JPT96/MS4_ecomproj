@@ -86,6 +86,20 @@ def processOrder(request):
             order.complete = True
         order.save()
 
+        if order.shipping == True:
+            shippingAddress.objects.create(
+                customer = customer,
+                order = order,
+                address = data ['shipping']['address']
+                city = data ['shipping']['city']
+                county = data ['shipping']['county']
+                postcode = data ['shipping']['postcode']
+                country = data ['shipping']['country']
+            )
+        else:
+            
+
+
 
 
 
