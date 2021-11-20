@@ -82,7 +82,11 @@ if (shipping == 'False'){
 
 var form = document.getElementById('form')
 form.addEventListener('submit', function(e){
-    
+    e.preventDefault()
+    console.log("form sent")
+    document.getElementById('form-button').classList.add('hidden');
+    document.getElementById('payment-info').classList.remove('hidden');
+
 })
 
 </script>
