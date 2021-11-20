@@ -67,7 +67,7 @@ def updateitem(request):
         orderItem.quantity = (orderItem.quantity + 1)
     elif action =='remove':
         orderItem.quantity = (orderItem.quantity - 1)
-        orderItem.save()
+    orderItem.save()
     if orderItem.quantity <= 0:
         orderItem.delete()
 
@@ -77,7 +77,17 @@ def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
     if request.user.is_authenticated:
-        
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        total = float(data['form']['total'])
+        order.transaction_id = transaction_id
+
+        if total == float(order.get_cart_total):
+            order.complete = True
+        order.save()
+
+
+
 
 
     return JsonResponse('Your order is on the way', safe = False) 
