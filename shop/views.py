@@ -76,7 +76,8 @@ def updateitem(request):
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
-    
+    if request.user.is_authenticated:
+        
 
 
     return JsonResponse('Your order is on the way', safe = False) 
