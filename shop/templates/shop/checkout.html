@@ -82,11 +82,11 @@
 
     var shipping = '{{order.shipping}}'
     if (shipping == 'False'){
-        document.getElementById('shipping-info').innerHTML = ''
+        document.getElementById('shipping-info').innerHTML = ' '
     }
     var total = '{{order.get_cart_total|floatformat:2}}'
     if (user != 'AnonymousUser'){
-        document.getElementById('user-info').innerHTML = ''
+        document.getElementById('user-info').innerHTML = ' '
        
     }
     if(shipping == 'False' && user != 'AnonymousUser'){
