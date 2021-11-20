@@ -25,6 +25,7 @@ def checkout(request):
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
         items = order.orderitem_set.all()
+        cartItems = order.get_cart_items
     else:
         items = []
         order = {'get_cart_total':0, 'get_cart_items':0}
@@ -44,10 +45,10 @@ def updateitem(request):
     orderItem, created =  OrderItem.objects.get_or_create(order = order, product=product)
 
     if action == 'add':
-        orderItem.quantity = (orderItem,quantity + 1)
+        orderItem.quantity = (orderItem.quantity + 1)
     elif action =='remove':
-         orderItem.quantity = (orderItem,quantity - 1)
-    orderItem.save()
+        orderItem.quantity = (orderItem.quantity - 1)
+        orderItem.save()
     if orderItem.quantity <= 0:
         orderItem.delete()
 
