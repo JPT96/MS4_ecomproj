@@ -90,14 +90,15 @@ def processOrder(request):
             shippingAddress.objects.create(
                 customer = customer,
                 order = order,
-                address = data ['shipping']['address']
-                city = data ['shipping']['city']
-                county = data ['shipping']['county']
-                postcode = data ['shipping']['postcode']
-                country = data ['shipping']['country']
+                address = data ['shipping']['address'],
+                city = data ['shipping']['city'],
+                county = data ['shipping']['county'],
+                postcode = data ['shipping']['postcode'],
+                country = data ['shipping']['country'],
             )
         else:
-            
+            print('user is not signed in')
+        return JsonResponse('Your order is on the way', safe = False) 
 
 
 
@@ -105,4 +106,5 @@ def processOrder(request):
 
 
 
-    return JsonResponse('Your order is on the way', safe = False) 
+
+    
