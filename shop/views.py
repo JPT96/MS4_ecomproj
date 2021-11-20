@@ -13,7 +13,8 @@ def shop(request):
     else:
         items = []
         order = {'get_cart_total':0, 'get_cart_items':0}
-        
+         cartItems = ['get_cart_items']
+
     products = Product.objects.all()
     context = {'products':products}
     return render (request, 'shop/shop.html', context)
@@ -40,7 +41,7 @@ def checkout(request):
         items = []
         order = {'get_cart_total':0, 'get_cart_items':0}
     context = {'items':items, 'order':order}
-     cartItems
+     
     return render(request, 'shop/checkout.html', context)
 
 def updateitem(request):
