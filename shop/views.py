@@ -70,4 +70,7 @@ def updateitem(request):
     if orderItem.quantity <= 0:
         orderItem.delete()
 
-    return JsonResponse('add has been added', safe=False)
+    return JsonResponse('add has been added', safe = False)
+
+def processOrder(request):
+    return JsonResponse('Your order is on the way', safe = False) 
