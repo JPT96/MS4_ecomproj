@@ -71,6 +71,7 @@ class ShippingAddress(models.Model):
     city = models.CharField(max_length=200,null=False)
     county = models.CharField(max_length=200,null=False)
     postcode = models.CharField(max_length=200,null=False)
+    country = models.CharField(max_length=200,null=False)
     date_added = models.DateTimeField(auto_now_add=True)
 
     @property

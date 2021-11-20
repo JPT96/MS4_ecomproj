@@ -35,6 +35,9 @@
                     <div class="formfield">
                         <input required class="form-inputs"type="text" name="postcode/zipcode" placeholder="Postcode/Zipcode...">
                     </div>
+                    <div class="formfield">
+                        <input required class="form-inputs"type="text" name="country" placeholder="Country...">
+                    </div>
                 </div>
                 <hr>
                 <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
@@ -80,7 +83,8 @@
     var shipping = '{{order.shipping}}'
     if (shipping == 'False'){
         document.getElementById('shipping-info').innerHTML = ''
-}
+    }
+    var total = '{{order.get_cart_total|floatformat:2}}'
     if (user != 'AnonymousUser'){
         document.getElementById('user-info').innerHTML = ''
        
@@ -105,6 +109,21 @@
 
     function submitFormData(){
         console.log('purchase,has been clicked')
+        var userFormData = {
+            'name':null,
+            'email':null,
+            'total':total,
+
+
+        }
+        var shippingInfo = {
+            'address':null,
+            'city':null,
+            'county/state':null,
+            'postcode/zipcode':null
+            
+
+        }
     }
 
 })
