@@ -104,4 +104,5 @@ def processOrder(request):
 
 
 
+
     return JsonResponse('Your order is on the way', safe = False) 
