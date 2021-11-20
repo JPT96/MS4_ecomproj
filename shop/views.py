@@ -73,4 +73,5 @@ def updateitem(request):
     return JsonResponse('add has been added', safe = False)
 
 def processOrder(request):
+    print('Data:', request.body)
     return JsonResponse('Your order is on the way', safe = False) 
