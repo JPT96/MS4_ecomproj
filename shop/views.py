@@ -75,6 +75,7 @@ def updateitem(request):
 
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
+    data = json.loads(request.body)
     
 
 
