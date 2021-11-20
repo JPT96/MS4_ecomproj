@@ -120,10 +120,17 @@
         var shippingInfo = {
             'address':null,
             'city':null,
-            'county/state':null,
-            'postcode/zipcode':null
-            
+            'county':null,
+            'postcode':null,
+            'country':null
 
+        }
+        if (shipping != 'False'){
+            shippingInfo.address = form.address.value
+            shippingInfo.city = form.city.value
+            shippingInfo.county = form.county/state.value
+            shippingInfo.postcode
+            shippingInfo.country
         }
     }
 
